@@ -14,3 +14,12 @@ if(happy) {
 } else {
   println("i " + noth + " clap my hands");
 }
+
+/*
+//alternativ metode
+String isHappy= happy?" ":"don't";
+String msg = "hi my name is \n" + name
+              + "i am "+age+"years old";
+              + "I "+isHappy+"clap my hands";
+printin(msg);
+*/
