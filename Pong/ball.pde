@@ -26,15 +26,15 @@ class Ball {
   }
   //Move object argument allow us to us tempBar1. and tempBar2. functions 
   void move(Bar tempBar1, Bar tempBar2) {
-    //Getting bar attributes for collision
-    tempBar1.tempBarHeight();
+    //Getting bar attributes for collision - !Unnessesary.!
+    /*tempBar1.tempBarHeight();
     tempBar1.tempBarWidth();
     tempBar1.tempPosBarY();
     tempBar1.tempPosBarX();
     tempBar2.tempBarHeight();
     tempBar2.tempBarWidth();
     tempBar2.tempPosBarY();
-    tempBar2.tempPosBarX();
+    tempBar2.tempPosBarX();*/
     
     xpos += ballSpeedX;
     ypos += ballSpeedY;
