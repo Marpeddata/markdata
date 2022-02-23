@@ -7,6 +7,7 @@ public class Main
 		System.out.println(" ");
 		//1.c
 		print("blabla");
+		//1.d
 		nameAge("Mark","99");					
 	}
 
