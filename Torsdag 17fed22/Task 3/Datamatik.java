@@ -1,17 +1,17 @@
 public class Datamatik{
+			
 
-			Teacher tobias;
-			Student mark;
-			Student mayas;
 
 	public static void main(String[]args) 
 	{
 
+		Teacher tobias = new Teacher("Tobias", 78, false);
+		Student mark = new Student("Mark", 78, false, "Studerende");
+		Student mayas = new Student("Mayas", 78, false, "Studerende");
 
-		tobias = new Teacher("Tobias", 78, false);
-		mark = new Student("Mark", 78, false, true);
-		mayas = new Student("Mayas", 78, false, true);
-
+		System.out.println(tobias.getName());	
+		System.out.println(mark.getName() + " " + mark.getTeam());
+		System.out.println(mayas.getName() + " " + mayas.getTeam());	
 		
 	}
 	

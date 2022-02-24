@@ -1,11 +1,11 @@
-class Teacher {
+public class Teacher {
 
-	String name;
-	int age;
-	boolean isFemale;
+	public String name;
+	public int age;
+	public boolean isFemale;
 	
 
-Teacher(String tmpName, int tmpAge, boolean tmpIsFemale) {
+public Teacher(String tmpName, int tmpAge, boolean tmpIsFemale) {
 
 	this.name = tmpName;
 	this.age = tmpAge;
@@ -13,4 +13,8 @@ Teacher(String tmpName, int tmpAge, boolean tmpIsFemale) {
 	
 
 	}
+public String getName() {
+	return this.name;
+} 
+
 }
