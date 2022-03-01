@@ -20,7 +20,7 @@ public static void main(String [] args) {
 
 public static boolean iAmHappy()
 {
-  //2.a fillif out what is missing here: 
+  //2.a fillig out what is missing here: 
   if(happy)
   {
 
@@ -46,6 +46,7 @@ public static boolean isFirstLetCap(String word){
       return true;
   }
   return false;
+  //kan omskrives til "return Character.isUpperCase(word.charAt(0))"
 }
 
 

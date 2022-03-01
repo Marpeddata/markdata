@@ -1,9 +1,9 @@
 public class Student {
 
-	String name;
-	int age;
-	boolean isFemale;
-	String datamatikerTeam;
+	private String name;
+	private int age;
+	private boolean isFemale;
+	private String datamatikerTeam;
 
 public Student(String tmpName, int tmpAge, boolean tmpIsFemale, String tmpDatamatikerTeam) {
 
