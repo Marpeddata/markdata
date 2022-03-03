@@ -6,27 +6,27 @@ public class Main {
     static Bank bank;
 
     public static void main(String[] args) {
+       // System.out.println("Progression of the code:");
+       // System.out.println("1. Main");
+        //Connection to Bank class.
         bank = new Bank("Lollandsbanken");
-        String name = getUserInput("tast kundens navn:");
-        int age = Integer.parseInt(getUserInput("Tast kundens alder:"));
+       // System.out.println("3. Gets name");
+        bank.startDialog();
+        System.out.println(bank.customers);
 
-        bank.addCustomer(name, age);
 
 
-        System.out.println(bank.customers.get(0).getName() + ": " + age);
+
+
+        //System.out.println(bank.customers.get(0).getName() + ": " + age);
         //Same as line 9
         // Customer c = bank.customers.get(0);
         // String theName = c.getName();
         // System.out.print(thename);
 
     }
-        static String getUserInput(String msg){
-            System.out.println(msg);
-            Scanner scan = new Scanner(System.in);
-            String input = scan.nextLine();
 
-            return input;
-        }
+
     }
 
 
