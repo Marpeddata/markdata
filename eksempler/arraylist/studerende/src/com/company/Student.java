@@ -16,10 +16,12 @@ public class Student {
     }
 
     public String getName() {
+
         return this.name;
     }
 
     public String getTeam() {
+
         return this.datamatikerTeam;
     }
 }
