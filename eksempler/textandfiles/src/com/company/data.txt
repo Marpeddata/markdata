@@ -1,0 +1,3 @@
+Egon, 30000, København
+Benny, 30000, London
+Kjeld, 30000, Lisabon
