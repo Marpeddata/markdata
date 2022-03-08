@@ -24,22 +24,25 @@ public class Main {
         System.out.println(tempValue);
         /*for(int i = 0;i > 0; i--){
             tempValue--;
-*/      tempValue--;
-        if(tempValue != 0) {
-            System.out.println(tempValue);
+*/
+        tempValue--;
+        if (tempValue != 0) {
+            //System.out.println(tempValue);
             recursion(tempValue);
         }
 
 
     }
+
     public static void fiboNac(int a, int b) {
         System.out.println(a + "\t" + b);
-        if (a+b < 10000) {
+        if (a + b < 10000) {
             int sum = a + b;
             fiboNac(b, sum);
         }
     }
-    public static int randomNumber (int[] tempArr){
+
+    public static int randomNumber(int[] tempArr) {
 
         int rand = new Random().nextInt(tempArr.length);
         return tempArr[rand];
@@ -50,7 +53,7 @@ public class Main {
         for (int i = 0; i < 100; i++) {
             if (i % value == 0) {
 
-                System.out.println(i +" "+ value);
+                System.out.println(i + " " + value);
             }
         }
     }
