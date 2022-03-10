@@ -8,7 +8,7 @@ public class TextUI {
     public ArrayList<String> getPlayerNames(String message) {
         ArrayList<String> data = new ArrayList<>();
         //Show user message
-        System.out.println(message);
+        //System.out.println(message);
         String input = "";
 
         Scanner scan = new Scanner(System.in);

@@ -42,7 +42,9 @@ public class Game {
 
             //Since the data from the file is string
             //We transform the balance/value into integer.
-            int balance = Integer.parseInt(values[1]);
+            
+            //int balance = Integer.parseInt(values[1]);
+            int balance = Integer.parseInt("30000");
 
             //calling the Player class creating a new player for each loop
             //player name will be index[0] of the Arraylist above(values),
