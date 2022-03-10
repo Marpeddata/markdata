@@ -18,6 +18,7 @@ public class Main {
     public static void main(String[] args) {
 
 
+
         ArrayList<Customer>customers = new ArrayList<>();
         customers.add(mark = new Customer("Mark","Pedersen","Lastscene"));
         customers.add(peter = new Customer("Peter","Petersen","Mogens"));
@@ -27,11 +28,14 @@ public class Main {
         customers.add(bob = new Customer("Bob","Bob","Bobber"));
 
 
-            for(Customer profile : customers) {
+            for (Customer profile : customers) {
                 System.out.println(profile);
             }
 
 
 
+
+
     }
+
 }
