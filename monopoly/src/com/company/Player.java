@@ -13,14 +13,17 @@ public class Player {
     //Converting the string values to "humanfriendly" info!
     @Override
     public String toString(){
+
         return name+": "+ account.getBalance();
     }
     // both getters here arent used in the code atm.
     public String getName(){
+
         return name;
     }
 
     public int getBalance() {
+
         return account.getBalance();
     }
 

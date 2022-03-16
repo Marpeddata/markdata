@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+
+object Main
+class Ingredients{
+-
+}
+class Course{
+Ingredients array
+}
+class FileIO{
+-ArrayList<Integer> quantity
+-ArrayList<String> ingrName
+-ArrayList<String> courseName
+
+FileIO()
+
++getQuantity
++getInrename
++getcourseName
+}
+object Planner
+
+Main *-- Planner
+Planner *-- Course
+Course *-- FileIO
+Ingredients *-- FileIO
+Course *-- Ingredients
+
+
+@enduml

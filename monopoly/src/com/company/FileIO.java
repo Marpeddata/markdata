@@ -12,7 +12,7 @@ public class FileIO {
 
 
     //source of the file we read from
-    File file = new File("src/com/company/datatxt");
+    File file = new File("src/com/company/data.txt");
 
     //Creating an arraylist to store all data from the data.txt file,
     // to be formatted in games.java
@@ -32,6 +32,30 @@ public class FileIO {
     }
         return data;
 
+    }
+
+    public String[] readFieldData() {
+
+        File file = new File("src/com/company/fieldData.csv");
+        String[] data = new String[40];
+
+        try {
+            Scanner scan = new Scanner(file);
+            int i = 0; //counter variabel
+
+            String header = scan.nextLine();//Ignorer header
+            System.out.println(header);
+            while (scan.hasNextLine()) {
+                data[i]=scan.nextLine();
+                i++;
+                // data.add();
+            }
+        } catch (FileNotFoundException e) {
+
+            data = null;
+
+        }
+        return data;
     }
 
 

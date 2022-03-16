@@ -13,12 +13,20 @@ public class TextUI {
 
         Scanner scan = new Scanner(System.in);
 
-        while(!input.equals("Q")){
+        //As long as assigned players(via console) is less than the total numbers is less of equal to 6
+        while(data.size() <= 6) {
             System.out.println(message);
-            input = scan.nextLine();
+            //Continues to ask untill "Q" is pressed and this will be ignored.
+            if (input.equalsIgnoreCase("Q")) {
+                break;
+            }
             data.add(input);
         }
 
+
+
         return data;
     }
-}
+
+    }
+

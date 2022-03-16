@@ -9,12 +9,16 @@ public class Game {
     FileIO fileIO = new FileIO();
     private TextUI textUI = new TextUI();
 
+
     //Constructor
     public Game() {
-
+//loading player data
         //Creating an arraylist(called data) to store formated data
         //from readGameData methode/arraylist in FileIO class
         ArrayList<String> data = new ArrayList<>();
+
+
+
         data = fileIO.readGameData();
 
         //if data file is empty, get user input from console.
@@ -25,7 +29,15 @@ public class Game {
         }
             //Refactoring
             this.createPlayers(data);
-        }
+
+        //vi loader felt data
+
+        String[] fieldData = fileIO.readFieldData();
+        System.out.println(fieldData[fieldData.length-1]);
+        Board board = new Board(fieldData);
+
+
+    }
 
 
 
@@ -39,13 +51,16 @@ public class Game {
         for (String s : data) {
             //System.out.println(s);
             String[] values = s.split(": ");
-
+            int balance;
             //Since the data from the file is string
             //We transform the balance/value into integer.
-            
-            //int balance = Integer.parseInt(values[1]);
-            int balance = Integer.parseInt("30000");
 
+            if(values.length > 1) {
+                balance = Integer.parseInt(values[1]);
+            } else {
+                //int balance = Integer.parseInt(values[1]);
+                balance = Integer.parseInt("30000");
+            }
             //calling the Player class creating a new player for each loop
             //player name will be index[0] of the Arraylist above(values),
             //and the balance of this new player will be the index[1] after
