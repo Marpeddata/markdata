@@ -44,7 +44,7 @@ public class FileIO {
             int i = 0; //counter variabel
 
             String header = scan.nextLine();//Ignorer header
-            System.out.println(header);
+            //System.out.println(header);
             while (scan.hasNextLine()) {
                 data[i]=scan.nextLine();
                 i++;

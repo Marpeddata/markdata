@@ -8,7 +8,7 @@ public class Dice {
         int[] arr = new int[2];
         Random rd = new Random();
         arr[0] = rd.nextInt(1,7);
-        arr[0] = rd.nextInt(1,7);
+        arr[1] = rd.nextInt(1,7);
         return arr;
     }
 

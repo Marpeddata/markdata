@@ -27,6 +27,31 @@ public class Player {
         return account.getBalance();
     }
 
+    private void buyProperty(int amount, int id){
+        this.account.doTransaction(-amount);
+    }
 
+    private void receiveMoney(int amount){
+        this.account.doTransaction(amount);
+    }
+
+    private void payRent(int amount, Player recipient){
+        boolean result = recipient.account.doTransaction(amount);
+        if(result == true) {
+            this.account.doTransaction(-amount);
+        }
+    }
+    private int currentPosition = 1;
+    public int getCurrentPosition(){
+        return currentPosition;
+    }
+
+    public int updatePosition(int roll){
+        currentPosition += roll;
+        if(currentPosition > 40){
+            currentPosition -= 40;
+        }
+        return currentPosition;
+    }
 
 }

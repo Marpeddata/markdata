@@ -6,9 +6,10 @@ public class Game {
     //creating the new arraylist called "players"
     ArrayList<Player> players = new ArrayList<>();
     //creating a new object "fileIO" from class FileIO
-    FileIO fileIO = new FileIO();
+    private FileIO fileIO = new FileIO();
     private TextUI textUI = new TextUI();
-
+    private Dice dice = new Dice();
+    private Player currentPlayer;
 
     //Constructor
     public Game() {
@@ -36,13 +37,22 @@ public class Game {
         System.out.println(fieldData[fieldData.length-1]);
         Board board = new Board(fieldData);
 
+        //gameloop
+        this.currentPlayer = this.players.get(0);
+        takeTurn();
 
     }
 
 
 
 
+private void takeTurn(){
+        int diceValue = dice.rollDiceSum();
+        textUI.displayMessage(this.currentPlayer.getName() + " slog " + diceValue);
 
+
+
+}
 
 
     private void createPlayers(ArrayList<String> data) {
