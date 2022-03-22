@@ -10,6 +10,7 @@ public class Game {
     private TextUI textUI = new TextUI();
     private Dice dice = new Dice();
     private Player currentPlayer;
+    private Board board;
 
     //Constructor
     public Game() {
@@ -35,7 +36,8 @@ public class Game {
 
         String[] fieldData = fileIO.readFieldData();
         System.out.println(fieldData[fieldData.length-1]);
-        Board board = new Board(fieldData);
+        board = new Board(fieldData);
+
 
         //gameloop
         this.currentPlayer = this.players.get(0);
@@ -47,9 +49,18 @@ public class Game {
 
 
 private void takeTurn(){
-        int diceValue = dice.rollDiceSum();
-        textUI.displayMessage(this.currentPlayer.getName() + " slog " + diceValue);
+    int diceValue = dice.rollDiceSum();
+    textUI.displayMessage(currentPlayer + " Slog " + diceValue);
+    int newPosition = currentPlayer.updatePosition(diceValue);
+    //Field benyttes her som variable type, den skal kunne rumme alle typer data som field classen har.
+    //Det er ikke en instanciering, den benyttes kun som variabel type.
+    Field f =  board.getField(newPosition);
+    String decisionRequest = f.onLand(currentPlayer);
 
+    String response = textUI.getUserInput(decisionRequest);
+    textUI.displayMessage(decisionRequest);
+    String processedResponse = f.processResponse(currentPlayer,response);
+    System.out.println(processedResponse);
 
 
 }

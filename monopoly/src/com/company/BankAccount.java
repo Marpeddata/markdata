@@ -5,10 +5,12 @@ public class BankAccount {
 
         //Constructor - used in player class (Data)
     public BankAccount(int balance){
+
         this.balance = balance;
     }
         //Getter - Used in Player class (toString)
     public int getBalance() {
+
         return balance;
     }
 /*

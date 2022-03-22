@@ -29,6 +29,7 @@ public class TextUI {
     }
 
     public void displayMessage (String msg){
+
         System.out.println(msg);
     }
 
@@ -38,7 +39,7 @@ public class TextUI {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
 
-        if(input.equalsIgnoreCase("Y")|| input.equalsIgnoreCase("N"))
+        if(!input.equalsIgnoreCase("Y")&& !input.equalsIgnoreCase("N"))
         {
             System.out.println("Dit svar er ikke gyldigt. Dit svar skal være y eller n. Prøv igen");
             getUserInput(message);

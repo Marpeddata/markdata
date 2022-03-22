@@ -4,6 +4,7 @@ public class Player {
     private String name;
     //Class call creating a new BankAccount, named "account"
     private BankAccount account;
+    private int currentPosition = 1;
 
 
     public Player(String name, int balance){
@@ -27,7 +28,8 @@ public class Player {
         return account.getBalance();
     }
 
-    private void buyProperty(int amount, int id){
+    public void buyProperty(int amount, int id){
+
         this.account.doTransaction(-amount);
     }
 
@@ -41,8 +43,9 @@ public class Player {
             this.account.doTransaction(-amount);
         }
     }
-    private int currentPosition = 1;
+
     public int getCurrentPosition(){
+
         return currentPosition;
     }
 
