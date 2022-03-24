@@ -9,7 +9,8 @@ public abstract class AFuelCar extends ACar {
 
     abstract String getFuelType();
 
-    int kmPrLitre(){
+    int getKmPrLitre(){
+
         return 1;
     }
 

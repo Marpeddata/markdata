@@ -3,28 +3,31 @@ public class ElectricCar extends ACar{
     private int batteryCapacity;
     private int maxRange;
 
-    public ElectricCar(String licensePlate, String make, String model, int numberOfDoors, int kmPrLitre,int batteryCapacity,int maxRange){
+    public ElectricCar(String licensePlate, String make, String model, int numberOfDoors,int batteryCapacity,int maxRange){
         super(licensePlate, make, model, numberOfDoors);
         this.batteryCapacity = batteryCapacity;
         this.maxRange = maxRange;
     }
 
     int getBatteryCapacityKWh(){
+
         return batteryCapacity;
     }
 
     int getMaxRangeKm(){
+
         return maxRange;
     }
 
     int getWhPrKm(){
-        return batteryCapacity/maxRange;
+        return getBatteryCapacityKWh() / getMaxRangeKm();
     }
 
     @Override
     public int getRegistrationFee() {
 
-        double kmPrLitre = (getWhPrKm()/91.25)/100;
+        double kmPrLitre = (100/(getWhPrKm()/91.25));
+        //System.out.println(kmPrLitre);
 
         if(kmPrLitre >= 20 && kmPrLitre <= 50){
             return 330;
@@ -46,7 +49,9 @@ public class ElectricCar extends ACar{
 
     @Override
     public String toString(){
-        return super.toString() + "Max Range pr Charge: " + maxRange + "\n" + "Wh pr Km " + getWhPrKm() + "\n";
+        return super.toString() + "\n" + "Max Range pr Charge: " + maxRange + "\n" + "Wh pr Km: " + getWhPrKm() + "\n";
     }
+
+
 
 }

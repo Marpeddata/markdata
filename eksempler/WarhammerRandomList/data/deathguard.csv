@@ -1,0 +1,50 @@
+name,minsize,maxsize,modelprice,type
+Death Guard Chaos Lord,1,1,85,hq
+Death Guard Chaos Lord in Terminator Armour,1,1,105,hq
+Death Guard Daemon Prince,1,1,150,hq
+Death Guard Sorcerer in Terminator Armour,1,1,110,hq
+Lord of Contagion,1,1,120,hq
+Lord of Virulence,1,1,120,hq
+Malignant Plaguecaster,1,1,95,hq
+Typhus,1,1,165,hq
+Death Guard Cultists,10,30,5,troops
+Plague Marines,5,10,21,troops
+Poxwalkers,10,20,5,troops
+Biologus Putrifier,1,1,65,elites
+Blightlort Terminators,5,10,40,elites
+Chaos Comtemptor Dreadnought,1,1,140,elites
+Chaos Deredeo Dreadnought,1,1,190,elites
+Chaos Leviathan Dreadnought,1,1,220,elites
+Death Guard Possessed,5,10,24,elites
+Deathshroud Terminators,3,6,50,elites
+Decimator,1,1,160,elites
+Foul Blightspawn,1,1,75,elites
+Helbrute,1,1,120,elites
+Noxious Blightbringer,1,1,60,elites
+Plague Surgeon,1,1,75,elites
+Tallyman,1,1,70,elites
+Chaos Spawn,1,5,23,fastattack
+Death Guard Greater Blight Drone,1,1,125,fastattack
+Dreadclaw Drop Pod,1,1,115,fastattack
+Foetid Bloat-drone,1,1,135,fastattack
+Myphitic Blight-Haulers,1,3,140,fastattack
+Chaos Land Raider,1,1,265,heavysupport
+Chaos Land Raider Achilles,1,1,340,heavysupport
+Chaos Land Raider Proteus,1,1,235,heavysupport
+Chaos Predator Annihilator,1,1,130,heavysupport
+Chaos Predator Destructor,1,1,140,heavysupport
+Chaos Rapier Carrier,1,1,75,heavysupport
+Chaos Sicaran Battle Tank,1,1,180,heavysupport
+Chaos Sicaran Punisher,1,1,170,heavysupport
+Chaos Sicaran Venator,1,1,185,heavysupport
+Chaos Cindicator Laser Destroyer,1,1,175,heavysupport
+Chaos Whirlwind Scorpius,1,1,170,heavysupport
+Defiler,1,1,180,heavysupport
+Plagueburst Crawler,1,1,175,heavysupport
+Chaos Fire Raptor Gunship,1,1,340,flyer
+Chaos Storm Eagle Gunship,1,1,335,flyer
+Chaos Xiphon Interceptor,1,1,235,flyer
+Hell Blade,1,1,135,flyer
+Hell Talon,1,1,210,flyer
+Chaos Rhino,1,1,80,dedicatedtransport
+Chaos Terrax-Pattern Termite,1,1,180,dedicatedtransport
