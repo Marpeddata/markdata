@@ -1,5 +1,5 @@
 public abstract class AFuelCar extends ACar {
-    int kmPrLitre;
+    private int kmPrLitre;
 
     AFuelCar(String licensePlate, String make, String model, int numberOfDoors, int kmPrLitre) {
         super(licensePlate, make, model, numberOfDoors);
@@ -9,9 +9,9 @@ public abstract class AFuelCar extends ACar {
 
     abstract String getFuelType();
 
-    int getKmPrLitre(){
+    public int getKmPrLitre(){
 
-        return 1;
+        return kmPrLitre;
     }
 
 

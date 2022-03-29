@@ -6,6 +6,7 @@ public class FleetOfCars {
 
 
     void addCar(Car car){
+
         fleet.add(car);
     }
 
@@ -20,7 +21,17 @@ public class FleetOfCars {
 
     @Override
     public String toString(){
-        return fleet.toString();
+
+        StringBuilder res = new StringBuilder();
+        res.append("Fleet of Cars:\n");
+        res.append("**********************************************");
+        for(Car car : fleet){
+            res.append(car.toString());
+            res.append("**********************************************");
+        }
+        return res.toString();
+
+        //return fleet.toString();
     }
 
 }

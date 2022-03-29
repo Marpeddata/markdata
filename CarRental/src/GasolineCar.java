@@ -12,19 +12,19 @@ public class GasolineCar extends AFuelCar{
 
     @Override
     public int getRegistrationFee() {
-        if(kmPrLitre >= 20 && kmPrLitre <= 50){
+        if(getKmPrLitre() >= 20 && getKmPrLitre() <= 50){
             return 330;
         }
-        if(kmPrLitre >= 15 && kmPrLitre <= 20){
+        if(getKmPrLitre() >= 15 && getKmPrLitre() <= 20){
             return 1050;
         }
-        if(kmPrLitre >= 10 && kmPrLitre <= 15){
+        if(getKmPrLitre() >= 10 && getKmPrLitre() <= 15){
             return 2340;
         }
-        if(kmPrLitre >= 5 && kmPrLitre <= 10){
+        if(getKmPrLitre() >= 5 && getKmPrLitre() <= 10){
             return 5500;
         }
-        if(kmPrLitre > 0 && kmPrLitre <=5){
+        if(getKmPrLitre() > 0 && getKmPrLitre() <=5){
             return 10470;
         }
         return 0;
@@ -32,7 +32,7 @@ public class GasolineCar extends AFuelCar{
 
     @Override
     public String toString(){
-        return super.toString() + "\n" + "Km pr Litre: " + kmPrLitre + "\n" + "FuelType: " + getFuelType() + "\n";
+        return super.toString() + "\n" + "Km pr Litre: " + getKmPrLitre() + "\n" + "FuelType: " + getFuelType() + "\n";
     }
 
 }

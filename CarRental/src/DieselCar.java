@@ -14,6 +14,7 @@ public class DieselCar extends AFuelCar{
 
     @Override
     String getFuelType() {
+
         return "Diesel";
     }
 
@@ -26,19 +27,19 @@ public class DieselCar extends AFuelCar{
             sum += 1000;
         }
 
-        if(kmPrLitre >= 20 && kmPrLitre <= 50){
+        if(getKmPrLitre() >= 20 && getKmPrLitre() <= 50){
             sum += 330+130;
         }
-        if(kmPrLitre >= 15 && kmPrLitre <= 20){
+        if(getKmPrLitre() >= 15 && getKmPrLitre() <= 20){
             sum += 1050+1390;
         }
-        if(kmPrLitre >= 10 && kmPrLitre <= 15){
+        if(getKmPrLitre() >= 10 && getKmPrLitre() <= 15){
             sum += 2340+1850;
         }
-        if(kmPrLitre >= 5 && kmPrLitre <= 10){
+        if(getKmPrLitre() >= 5 && getKmPrLitre() <= 10){
             sum += 5500+2770;
         }
-        if(kmPrLitre > 0 && kmPrLitre <=5){
+        if(getKmPrLitre() > 0 && getKmPrLitre() <=5){
             sum += 10470+15260;
         }
         return sum;
@@ -46,7 +47,7 @@ public class DieselCar extends AFuelCar{
 
     @Override
     public String toString(){
-        return super.toString() + "\n" + "Km pr Litre: " + kmPrLitre + "\n" + "FuelType: " + getFuelType() + "\n" + "Particle Filter:" + hasParticleFilter() + "\n";
+        return super.toString() + "\n" + "Km pr Litre: " + getKmPrLitre() + "\n" + "FuelType: " + getFuelType() + "\n" + "Particle Filter: " + hasParticleFilter() + "\n";
     }
 
 }

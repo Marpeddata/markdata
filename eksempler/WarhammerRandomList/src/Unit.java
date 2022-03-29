@@ -1,10 +1,12 @@
 public interface Unit {
 
-    String unitName;
-    String type;
-    int minimumUnitSize;
-    int maximumUnitSize;
-    int modelPrice;
+    String getUnitName();
+    String getType();
+    int getMinimumUnitSize();
+    int getMaximumUnitSize();
+    int getModelPrice();
+    int getTotalUnitCost();
+
 
 
 }
