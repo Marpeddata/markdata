@@ -3,7 +3,7 @@ import java.util.Random;
 
 public interface Detachment {
 
-
+/*
     ArrayList<detachmentType> batallion = new ArrayList<detachmentType>();
 
 
@@ -17,5 +17,5 @@ public interface Detachment {
         HQ.unitCost();
         Troops.unitCost();
     }
-
+*/
 }

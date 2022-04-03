@@ -46,4 +46,11 @@ public abstract class AbUnit implements Unit {
     public int getTotalUnitCost() {
         return 0;
     }
+
+
+    @Override
+    public String toString() {
+        return "\n" + "Unit: " + unitName + "\n" + "Type: " + type + "\n" + "Cost pr Model: " + modelCost + "\n" ;
+
+    }
 }

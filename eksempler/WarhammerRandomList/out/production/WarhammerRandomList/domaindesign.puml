@@ -1,0 +1,82 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface Unit
+interface Detachment
+class List
+class FileIO
+class TextUI
+abstract class AbDetachment
+abstract class AbUnit
+class Patrol
+class Battalion
+class HQ
+class Troops
+class Elites
+class FastAttack
+class HeavySupport
+class Flyer
+class DedicatedTransport
+
+
+List *-- Unit
+Unit *-- AbUnit
+AbUnit *-- HQ
+AbUnit *-- Troops
+AbUnit *-- Elites
+AbUnit *-- FastAttack
+AbUnit *-- HeavySupport
+AbUnit *-- Flyer
+AbUnit *-- DedicatedTransport
+AbUnit *-- FileIO
+List *-- TextUI
+List *-- Detachment
+Detachment *-- AbDetachment
+AbDetachment *-- Patrol
+AbDetachment *-- Battalion
+AbUnit : String unitName
+AbUnit : String type
+AbUnit : int minimumUnitSize
+AbUnit : int maximumUnitSize
+AbUnit : int modelCost
+AbUnit : CreateUnit();
+AbUnit : AbUnit(String unitName, String type, int maximumUnitSize, int minimumUnitSize, int modelCost)
+AbUnit : ArrayList<Unit> allUnits
+AbUnit : addUnits()
+Unit : String getUnitName();
+Unit : String getType();
+Unit : int getMinimumUnitSize();
+Unit : int getMaximumUnitSize();
+Unit : int getModelPrice();
+Unit : int getTotalUnitCost();
+HQ : getDetachmentType()
+HQ : int maxUnitType
+Troops : getDetachmentType()
+Troops : int maxDUnitType
+Troops : randomUnit(int getMinimumUnitSize, int get maximumUnitSize)
+Elites : getDetachmentType()
+Elites : int maxDUnitType
+Elites : randomUnit(int getMinimumUnitSize, int get maximumUnitSize)
+FastAttack : getDetachmentType()
+FastAttack : int maxDUnitType
+FastAttack : randomUnit(int getMinimumUnitSize, int get maximumUnitSize)
+HeavySupport : getDetachmentType()
+HeavySupport : int maxDUnitType
+HeavySupport : randomUnit(int getMinimumUnitSize, int get maximumUnitSize)
+Flyer : getDetachmentType()
+Flyer : int maxDUnitType
+Flyer : randomUnit(int getMinimumUnitSize, int get maximumUnitSize)
+DedicatedTransport : getDetachmentType()
+DedicatedTransport : int maxDUnitType
+FileIO : File file : datafile.csv
+FileIO : ArrayList<String> readGameData()
+TextUI : int getPoints()
+TextUI : Unit getHQ()
+TextUI : Unit getTroop()
+TextUI : getDetachmentType()
+Detachment : detachmentType(getPoints())
+Patrol : setNumberOfUnits()
+Battalion : setNumberOfUnits()
+
+
+@enduml
